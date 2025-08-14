@@ -1,8 +1,10 @@
 from __future__ import annotations
 
+from dotenv import load_dotenv
 from pydantic import BaseModel, Field, AnyHttpUrl
 import os
 
+load_dotenv()
 
 class HttpClientSettings(BaseModel):
     api_url: AnyHttpUrl = AnyHttpUrl("https://api.hunter.io/v2/")
